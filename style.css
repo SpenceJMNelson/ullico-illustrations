@@ -1,0 +1,59 @@
+.illustration-layers {
+  position:relative;
+  width:800px;
+  height:800px;
+}
+
+.layer1, .layer2 {
+
+}
+
+.layer2 {
+    position:absolute;
+  top:0;
+  left:0;
+}
+
+.layer1 img, .layer2 img {
+  width:900px;
+  height:900px;
+  transition-duration:1s;
+
+}
+
+.illustration-layers .layer1 img, .illustration-layers .layer2 img{
+  transform: translateX(20px);
+  opacity:0;
+}
+
+.illustration-layers:hover .layer1 img, .illustration-layers:hover .layer2 img{
+  transform: translateX(0px);
+  opacity:1;
+}
+
+.illustration-layers:active .layer1 img, .illustration-layers:active .layer2 img{
+  transform: translateX(-20px);
+  opacity:0;
+}
+
+
+.layer2 {
+  clip-path: polygon(66% 10%, 100% 10%, 69% 90%, 35% 90%);
+  transition-duration:1s;
+  opacity:0;
+
+}
+
+.illustration-layers:hover .layer2 {
+    clip-path: polygon(53% 10%, 87% 10%, 56% 90%, 22% 90%);
+  opacity:1;
+  transition-delay: 250ms;
+}
+
+
+.illustration-layers:active .layer2 {
+  clip-path: polygon(40% 10%, 74% 10%, 43% 90%, 9% 90%);
+  opacity:0;
+  transition-delay: 0s;
+
+}
