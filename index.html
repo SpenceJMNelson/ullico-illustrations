@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <title>CodePen - A Pen by Spence Nelson</title>
   <link rel="stylesheet" href="./style.css">
-
+<script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="illustration-layers">
+<div id="illustrations-wrapper">
+<div class="illustration-layers active">
   <div class="layer1">
     <img src="ullico-hero-img1_layer1.jpg">
   </div>
@@ -56,7 +57,15 @@
     <img src="ullico-hero-img6_layer2.jpg">
   </div>
 </div>
+</div>
 <!-- partial -->
 
 </body>
+<script>
+var toggleSlide = function(){
+  $("#illustrations-wrapper .illustration-layers.active").removeClass("active").addClass("finished")
+   .next().add("#illustrations-wrapper .illustration-layers:first").last().addClass("active");
+}
+setInterval(toggleSlide, 5000);
+</script>
 </html>
