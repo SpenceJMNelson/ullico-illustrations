@@ -17,7 +17,7 @@
 .layer1 img, .layer2 img {
   width:900px;
   height:900px;
-  transition-duration:1s;
+  transition-duration:2s;
   transition-timing-function: cubic-bezier(0.250, 0.005, 0.000, 1.000);
 
 }
@@ -40,7 +40,7 @@
 
 .layer2 {
   clip-path: polygon(70% 10%, 100% 10%, 69% 90%, 35% 90%);
-  transition-duration:1s;
+  transition-duration:2s;
   opacity:0;
   transition-timing-function: cubic-bezier(0.250, 0.005, 0.000, 1.000);
 
