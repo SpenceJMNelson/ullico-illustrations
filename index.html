@@ -62,9 +62,10 @@
 
 </body>
 <script>
+$("#illustration-slide-1").addClass("active");
 var toggleSlide = function(){
   $("#illustrations-wrapper .illustration-layers.active").removeClass("active").addClass("finished")
-   .next().add("#illustrations-wrapper .illustration-layers:first").last().addClass("active");
+   .next().add("#illustrations-wrapper .illustration-layers:first").last().addClass("active")
 }
 setInterval(toggleSlide, 5000);
 </script>
